@@ -58,4 +58,8 @@ public class MyArrayList<T> implements MyList<T> {
         T[] newArray = Arrays.copyOf(arr, arr.length * 3 / 2 + 1);
         arr = newArray;
     }
+
+    public static void main(String[] args) {
+
+    }
 }
