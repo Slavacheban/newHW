@@ -2,55 +2,57 @@ package myCollections;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class MyLinkedListTest {
 
     @Test
     public void add() {
-        MyLinkedList<String> linkedList = new MyLinkedList<String>();
+        MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
-        String actual = linkedList.get(0);
-        String espected = "ss";
-        assertEquals(espected, actual);
+        String actual = (String)linkedList.get(0);
+        String expected = "ss";
+        assertEquals(expected, actual);
     }
 
     @Test
     public void remove() {
-        MyLinkedList<String> linkedList = new MyLinkedList<String>();
+        MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
         linkedList.add("sw");
         linkedList.add("sc");
         linkedList.remove(1);
         int actual = linkedList.size();
-        int espected = 2;
-        assertEquals(espected, actual);
+        int expected = 2;
+        assertEquals(expected, actual);
     }
 
     @Test
     public void clear() {
-        MyLinkedList<String> linkedList = new MyLinkedList<String>();
+        MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
         linkedList.clear();
         int  actual = linkedList.size();
-        int espected = 0;
+        int expected = 0;
+        assertEquals(expected, actual);
     }
 
     @Test
     public void size() {
-        MyLinkedList<String> linkedList = new MyLinkedList<String>();
+        MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
-        int actusl = linkedList.size();
-        int espected = 1;
-        assertEquals(espected, actusl);
+        int actual = linkedList.size();
+        int expected = 1;
+        assertEquals(expected, actual);
     }
 
     @Test
     public void get() {
-        MyLinkedList<String> linkedList = new MyLinkedList<String>();
+        MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
-        String actual = linkedList.get(0);
-        String espected = "ss";
-        assertEquals(espected, actual);
+        String actual = (String)linkedList.get(0);
+        String expected = "ss";
+        assertEquals(expected, actual);
     }
+
 }

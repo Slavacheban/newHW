@@ -8,48 +8,49 @@ public class MyStackTest {
 
     @Test
     public void push() {
-        MyStack<String> stack = new MyStack<String>();
+        MyStack stack = new MyStack<String>();
         stack.push("ss");
         int actual = stack.size();
-        int espected = 1;
-        assertEquals(espected, actual);
+        int expected = 1;
+        assertEquals(expected, actual);
     }
 
     @Test
     public void clear() {
-        MyStack<String> stack = new MyStack<String>();
+        MyStack stack = new MyStack<String>();
         stack.push("ss");
         stack.clear();
         int actual = stack.size();
-        int espected = 0;
-        assertEquals(espected, actual);
+        int expected = 0;
+        assertEquals(expected, actual);
 
     }
 
     @Test
     public void size() {
-        MyStack<String> stack = new MyStack<String>();
+        MyStack stack = new MyStack<String>();
         stack.push("ss");
         int actual = stack.size();
-        int espected = 1;
-        assertEquals(espected, actual);
+        int expected = 1;
+        assertEquals(expected, actual);
     }
 
     @Test
     public void peek() {
-        MyStack<String> stack = new MyStack<String>();
+        MyStack stack = new MyStack<String>();
         stack.push("ss");
-        String actual = stack.peek();
-        String espected = "ss";
-        assertEquals(espected, actual);
+        String actual = (String)stack.peek();
+        String expected = "ss";
+        assertEquals(expected, actual);
     }
 
     @Test
     public void pop() {
-        MyStack<String> stack = new MyStack<String>();
+        MyStack stack = new MyStack<String>();
         stack.push("ss");
-        String actual = stack.pop();
-        String espected = "ss";
-        assertEquals(espected, actual);
+        String actual = (String)stack.pop();
+        String expected = "ss";
+        assertEquals(expected, actual);
     }
+
 }
