@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class MyStackTest {
 
     @Test
-    public void push() {
+    public void sizeAfterPush() {
         MyStack stack = new MyStack<String>();
         stack.push("ss");
         int actual = stack.size();
@@ -16,7 +16,7 @@ public class MyStackTest {
     }
 
     @Test
-    public void clear() {
+    public void sizeAfterClear() {
         MyStack stack = new MyStack<String>();
         stack.push("ss");
         stack.clear();
@@ -27,7 +27,7 @@ public class MyStackTest {
     }
 
     @Test
-    public void size() {
+    public void checkSize() {
         MyStack stack = new MyStack<String>();
         stack.push("ss");
         int actual = stack.size();
@@ -36,7 +36,7 @@ public class MyStackTest {
     }
 
     @Test
-    public void peek() {
+    public void equalsPushPeek() {
         MyStack stack = new MyStack<String>();
         stack.push("ss");
         String actual = (String)stack.peek();
@@ -45,7 +45,7 @@ public class MyStackTest {
     }
 
     @Test
-    public void pop() {
+    public void eualsPushPop() {
         MyStack stack = new MyStack<String>();
         stack.push("ss");
         String actual = (String)stack.pop();
