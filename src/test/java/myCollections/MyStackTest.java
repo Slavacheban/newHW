@@ -2,9 +2,29 @@ package myCollections;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class MyStackTest {
+
+    @Test
+    public void shouldPush() {
+        MyStack stack = new MyStack<String>();
+        stack.push("ss");
+        int actual = stack.size();
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldClear() {
+        MyStack stack = new MyStack<String>();
+        stack.push("ss");
+        stack.clear();
+        int actual = stack.size();
+        int expected = 0;
+        assertEquals(expected, actual);
+
+    }
 
     @Test
     public void sizeAfterPush() {
@@ -16,27 +36,7 @@ public class MyStackTest {
     }
 
     @Test
-    public void sizeAfterClear() {
-        MyStack stack = new MyStack<String>();
-        stack.push("ss");
-        stack.clear();
-        int actual = stack.size();
-        int expected = 0;
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void checkSize() {
-        MyStack stack = new MyStack<String>();
-        stack.push("ss");
-        int actual = stack.size();
-        int expected = 1;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void equalsPushPeek() {
+    public void peekAfterPush() {
         MyStack stack = new MyStack<String>();
         stack.push("ss");
         String actual = (String)stack.peek();
@@ -45,7 +45,7 @@ public class MyStackTest {
     }
 
     @Test
-    public void eualsPushPop() {
+    public void popAfterPush() {
         MyStack stack = new MyStack<String>();
         stack.push("ss");
         String actual = (String)stack.pop();

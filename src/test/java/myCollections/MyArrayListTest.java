@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class MyArrayListTest {
 
     @Test
-    public void add() {
+    public void shouldAdd() {
         MyArrayList list = new MyArrayList<String>();
         list.add("ss");
         String actual = (String)list.get(0);
@@ -16,7 +16,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    public void remove() {
+    public void shouldRemove() {
         MyArrayList list = new MyArrayList<String>();
         int espected = list.size();
         list.add("ss");
@@ -25,18 +25,20 @@ public class MyArrayListTest {
         assertEquals(espected, actual);
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void clear() {
+    @Test
+    public void shouldClear() {
         MyArrayList list = new MyArrayList<String>();
         list.add("ss");
         list.add("ss");
         list.add("ss");
         list.clear();
-        list.get(0);
+        int expected = 0;
+        int actual = list.size();
+        assertEquals(expected, actual);
     }
 
     @Test
-    public void size() {
+    public void sizeAfterAddThreeElements() {
         MyArrayList list = new MyArrayList<String>();
         list.add("ss1");
         list.add("ss2");
@@ -47,7 +49,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    public void get() {
+    public void getAfterAdd() {
         MyArrayList list = new MyArrayList<String>();
         list.add("ss");
         String actual = (String)list.get(0);

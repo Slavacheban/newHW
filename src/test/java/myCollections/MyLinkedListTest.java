@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class MyLinkedListTest {
 
     @Test
-    public void checkAdd() {
+    public void shouldAdd() {
         MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
         String actual = (String)linkedList.get(0);
@@ -16,7 +16,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void checkRemove() {
+    public void shouldRemove() {
         MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
         linkedList.add("sw");
@@ -28,7 +28,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void clearAndSize() {
+    public void shouldClear() {
         MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
         linkedList.clear();
@@ -38,7 +38,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void sizeEquals() {
+    public void sizeAfterAdd() {
         MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
         int actual = linkedList.size();
@@ -47,7 +47,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void getElements() {
+    public void getAfterAdd() {
         MyLinkedList linkedList = new MyLinkedList<String>();
         linkedList.add("ss");
         String actual = (String)linkedList.get(0);
