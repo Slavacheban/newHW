@@ -6,10 +6,10 @@ import static org.junit.Assert.assertEquals;
 
 public class MyArrayListTest {
 
-    @Test
+    @Test(expected = Exception.class)
     public void shouldAdd() {
         MyArrayList list = new MyArrayList<String>();
-        list.add("ss");
+        list.add(1);
         String actual = (String)list.get(0);
         String expected = "ss";
         assertEquals(expected, actual);
