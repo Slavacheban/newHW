@@ -1,22 +1,23 @@
 package myCollections;
 
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 public class MyArrayListTest {
 
     @Test(expected = Exception.class)
     public void shouldAdd() {
-        MyArrayList list = new MyArrayList<String>();
-        list.add(1);
-        String actual = (String)list.get(0);
+        MyArrayList<String> list = new MyArrayList<>();
+        list.add("ss");
+        String actual = list.get(0);
         String expected = "ss";
         assertEquals(expected, actual);
     }
 
     @Test
     public void shouldRemove() {
-        MyArrayList list = new MyArrayList<String>();
+        MyArrayList<String> list = new MyArrayList<>();
         int espected = list.size();
         list.add("ss");
         list.remove(0);
@@ -26,7 +27,7 @@ public class MyArrayListTest {
 
     @Test
     public void shouldClear() {
-        MyArrayList list = new MyArrayList<String>();
+        MyArrayList<String> list = new MyArrayList<>();
         list.add("ss");
         list.add("ss");
         list.add("ss");
@@ -38,7 +39,7 @@ public class MyArrayListTest {
 
     @Test
     public void sizeAfterAddThreeElements() {
-        MyArrayList list = new MyArrayList<String>();
+        MyArrayList<String> list = new MyArrayList<>();
         list.add("ss1");
         list.add("ss2");
         list.add("ss3");
@@ -49,9 +50,9 @@ public class MyArrayListTest {
 
     @Test
     public void getAfterAdd() {
-        MyArrayList list = new MyArrayList<String>();
+        MyArrayList<String> list = new MyArrayList<>();
         list.add("ss");
-        String actual = (String)list.get(0);
+        String actual = list.get(0);
         String expected = "ss";
         assertEquals(expected, actual);
     }
