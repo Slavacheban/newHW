@@ -1,4 +1,4 @@
-package myCollections;
+package mycollections;
 
 public class MyStack<T> {
     private T[] arr;

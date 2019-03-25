@@ -1,6 +1,7 @@
-package myCollections;
+package mycollections;
 
-import java.util.*;
+
+import java.util.Arrays;
 
 public class MyArrayList<T> implements MyList<T> {
     private T[] arr;
