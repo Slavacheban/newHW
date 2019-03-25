@@ -1,4 +1,4 @@
-package myCollections;
+package mycollections;
 
 import org.junit.Test;
 

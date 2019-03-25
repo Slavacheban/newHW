@@ -1,4 +1,4 @@
-package myCollections;
+package mycollections;
 
 public class MyNode<T> {
     public MyNode<T> prev;
